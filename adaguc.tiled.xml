@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Configuration>
+  <WMS>
+    <!--<WMSFormat name="image/png" format="image/png;mode=8bit_noalpha"/>-->
+    <WMSFormat name="image/png" format="image/png32"/>
+  </WMS>
   <Layer type="database">
     <Name>himawari</Name>
     <Title>himawari</Title>
