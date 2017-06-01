@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration>
+  <Layer type="database">
+    <Name>himawari</Name>
+    <Title>himawari</Title>
+    <FilePath>/data/adaguc-autowms/testsets/projectedgrids/full_disk_ahi_rgb_airmass_20170516105000.nc</FilePath>
+    <Variable>himawari</Variable>
+    <RenderMethod>rgba</RenderMethod>
+    <TileSettings tilewidthpx="800" 
+                  tileheightpx="800" 
+                  tilecellsizex="0.0125"
+                  tilecellsizey="0.0125"
+                  left="50" right="180"  bottom="-90" top="90"
+                  tileprojection="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+                  minlevel="1"
+                  maxlevel="4"
+                  tilemode="avg_rgba"
+                  debug="false"
+                  threads="1" 
+                  tilepath="/data/adaguc-autowms/tiles"
+                  optimizeextent="true"
+                  />
+      
+   </Layer>
+
+  <!-- End of configuration /-->
+</Configuration>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <Configuration>
+    <WMS>
+      <Inspire>
+        <ViewServiceCSW>http://nationaalgeoregister.nl/geonetwork/srv/dut/csw?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;id=bf56537a-dce6-11e3-82c1-901b0e19e163&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;elementSetName=full</ViewServiceCSW>
+        <DatasetCSW>http://nationaalgeoregister.nl/geonetwork/srv/dut/csw?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;id=daa63e4c-dce6-11e3-991e-901b0e19e163&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;elementSetName=full</DatasetCSW>
+      </Inspire>
+      
+    </WMS>
+    
+    
+
+  <Legend name="temperature" type="interval">
+    <palette index="0" color="#2E2E73"/>  <!-- -14 -->
+    <palette index="9" color="#282898"/>  <!-- -12 -->
+    <palette index="18" color="#201FBB"/> <!-- -10 -->
+    <palette index="27" color="#1A1ADC"/> <!-- -8 -->
+    <palette index="36" color="#3654DE"/> <!-- -6 -->
+    <palette index="45" color="#548EDC"/> <!-- -4 -->
+    <palette index="54" color="#72CADE"/> <!-- -2 -->
+    <palette index="63" color="#6DD8DF"/> <!-- 0-->
+    <palette index="72" color="#55CDE2"/> <!-- 2-->
+    <palette index="81" color="#38BBDC"/> <!-- 4 -->
+    <palette index="90" color="#20B0DC"/> <!-- 6 -->
+    <palette index="99" color="#19BAA6"/> <!-- 8 -->
+    <palette index="108" color="#1CCE6A"/> <!-- 10 -->
+    <palette index="117" color="#1BDF22"/> <!-- 12 -->
+    <palette index="126" color="#82C319"/> <!-- 14 -->
+    <palette index="135" color="#DCA819"/> <!-- 16 -->
+    <palette index="144" color="#DD921A"/> <!-- 18 -->
+    <palette index="153" color="#DE7C1A"/> <!-- 20 -->
+    <palette index="162" color="#DF671A"/> <!-- 22 -->
+    <palette index="171" color="#DE501A"/> <!-- 24 -->
+    <palette index="180" color="#DD3819"/> <!-- 26 -->
+    <palette index="189" color="#DD2319"/> <!-- 28 -->
+    <palette index="198" color="#D21A1E"/> <!-- 30 -->
+    <palette index="207" color="#C31927"/> <!-- 32 -->
+    <palette index="216" color="#AD1A30"/> <!-- 34 -->
+    <palette index="225" color="#9A1A3B"/> <!-- 36 -->
+    <palette index="234" color="#871A44"/> <!-- 38 -->
+    <palette index="240" color="#871A44"/> <!--  39,33 -->
+  </Legend>
+  
+  <Legend name="precipitation" type="interval">
+    <palette index="0" color="#BACDCB"/>  <!-- 0 -->
+    <palette index="30" color="#A3C3C9"/>  <!-- 0.1 -->
+    <palette index="60" color="#8BBCC8"/> <!-- 0.2 -->
+    <palette index="90" color="#6AAEC1"/> <!-- 0.5 -->
+    <palette index="120" color="#42A1C0"/> <!-- 1 -->
+    <palette index="150" color="#377EAF"/> <!-- 2 -->
+    <palette index="180" color="#46669C"/> <!-- 5 -->
+    <palette index="210" color="#56528D"/> <!-- 10-->
+    <palette index="239" color="#86008D"/> <!-- 30-->
+  </Legend>
+  
+  <Legend name="pressure" type="interval">
+    <palette index="0" color="#5C5797"/>  <!-- 960 -->
+    <palette index="12" color="#1D5791"/>  <!-- 964 -->
+    <palette index="24" color="#1E8BC5"/>  <!-- 968 -->
+    <palette index="36" color="#1EA6B9"/>  <!-- 972 -->
+    <palette index="48" color="#1A99A0"/>  <!-- 976 -->
+    <palette index="60" color="#1C7976"/>  <!-- 980 -->
+    <palette index="72" color="#1C7244"/>  <!-- 984 -->
+    <palette index="84" color="#72B060"/>  <!-- 988 -->
+    <palette index="96" color="#AFC560"/>  <!-- 992 -->
+    <palette index="108" color="#C9CF3C"/>  <!-- 996 -->
+    <palette index="120" color="#E3DA36"/>  <!-- 1000 -->
+    <palette index="132" color="#EFE686"/>  <!-- 1004 -->
+    <palette index="144" color="#EFE3BB"/>  <!-- 1008 -->
+    <palette index="156" color="#ECCB90"/>  <!-- 1012 -->
+    <palette index="168" color="#E7A34A"/>  <!-- 1016 -->
+    <palette index="180" color="#DE7222"/>  <!-- 1020 -->
+    <palette index="192" color="#D93531"/>  <!-- 1024 -->
+    <palette index="204" color="#C41F32"/>  <!-- 1028 -->
+    <palette index="216" color="#843537"/>  <!-- 1032 -->
+    <palette index="228" color="#5E3F3A"/>  <!-- 1036 -->
+    <palette index="239" color="#2E3F2A"/>  <!-- 1040 -->
+  </Legend>
+  
+  <Style name="stretch">
+    <Legend fixed="true" tickinterval="2">temperature</Legend>
+    <RenderMethod>point</RenderMethod>
+    <Scale>0</Scale>
+    
+    <Point plotstationid="false" pointstyle="point" discradius="15" textradius="0" dot="false" fontsize="8" textcolor="#000000" />
+  </Style>
+  
+
+  <Style name="temperature">
+    <Legend fixed="true" tickinterval="2">temperature</Legend>
+    <RenderMethod>point</RenderMethod>
+    <Min>-14</Min>
+    <Max>39,33333333</Max> <!-- 39,33333333 = (240 / (234/(38 - -14))) - 14 -->
+    <NameMapping name="point"        title="Temperature" abstract="Temperature"/>
+    <Point plotstationid="false" pointstyle="point" discradius="15" textradius="0" dot="false" fontsize="8" textcolor="#000000" />
+  </Style>
+  
+  <Style name="precipitation">
+    <Legend fixed="true" tickinterval="2">precipitation</Legend>
+    <RenderMethod>point</RenderMethod>
+    <Min>0</Min>
+    <Max>30</Max>
+    <NameMapping name="point"        title="precipitation" abstract="precipitation"/>
+    <Point plotstationid="false" pointstyle="point" discradius="15" textradius="0" dot="false" fontsize="8" textcolor="#000000" />
+  </Style>
+  
+  <Style name="pressure">
+    <Legend fixed="true" tickinterval="4">pressure</Legend>
+    <RenderMethod>point</RenderMethod>
+    <Min>960</Min>
+    <Max>1040</Max>
+    <NameMapping name="point"        title="pressure" abstract="pressure"/>
+    <Point plotstationid="false" pointstyle="point" discradius="15" textradius="0" dot="false" fontsize="8" textcolor="#000000" textformat="%0.0f"/>
+  </Style>
+  
+  <Style name="percentage">
+    <Legend fixed="true" tickinterval="2">temperature</Legend>
+    <RenderMethod>point</RenderMethod>
+    <Min>0</Min>
+    <Max>100</Max> <!-- 39,33333333 = (240 / (234/(38 - -14))) - 14 -->
+    <NameMapping name="point"        title="Percentage" abstract="Percentage"/>
+    <Point plotstationid="false" pointstyle="point" discradius="15" textradius="0" dot="false" fontsize="8" textcolor="#000000" />
+  </Style>
+
+  <Layer type="database">
+    <!--<Group value="KNMI Daily Obs"/>-->
+    <FilePath filter="^.*\.nc$">/data/adaguc-autowms/testsets/pointtimeseries/KIS___OPER_P___OBS_____L2.nc</FilePath>
+    <Variable>TG</Variable>
+    <Styles>temperature</Styles>
+    <Abstract>This is a View Service of data from the Royal Netherlands Meteorological Institute (KNMI). It concerns views for a non-harmonized INSPIRE dataset: temperature</Abstract>
+  </Layer>
+  
+  <Layer type="database">
+    <!--<Group value="KNMI Daily Obs"/>-->
+    <FilePath filter="^.*\.nc$">/data/adaguc-autowms/testsets/pointtimeseries/KIS___OPER_P___OBS_____L2.nc</FilePath>
+    <Variable>RH</Variable>
+    <Styles>precipitation</Styles>
+    <Abstract>This is a View Service of data from the Royal Netherlands Meteorological Institute (KNMI). It concerns views for a non-harmonized INSPIRE dataset: precipitation</Abstract>
+  </Layer>
+  
+  <Layer type="database">
+    <!--<Group value="KNMI Daily Obs"/>-->
+    <FilePath filter="^.*\.nc$">/data/adaguc-autowms/testsets/pointtimeseries/KIS___OPER_P___OBS_____L2.nc</FilePath>
+    <Variable>PG</Variable>
+    <Styles>pressure</Styles>
+    <Abstract>This is a View Service of data from the Royal Netherlands Meteorological Institute (KNMI). It concerns views for a non-harmonized INSPIRE dataset: pressure</Abstract>
+  </Layer>
+  
+  <Layer type="database">
+    <!--<Group value="KNMI Daily Obs"/>-->
+    <FilePath filter="^.*\.nc$">/data/adaguc-autowms/testsets/pointtimeseries/KIS___OPER_P___OBS_____L2.nc</FilePath>
+    <Variable>UG</Variable>
+    <Styles>percentage</Styles>
+    <Abstract>This is a View Service of data from the Royal Netherlands Meteorological Institute (KNMI). It concerns views for a non-harmonized INSPIRE dataset</Abstract>
+  </Layer>
+  
+  <Layer type="database">
+    <!--<Group value="KNMI Daily Obs"/>-->
+    <FilePath filter="^.*\.nc$">/data/adaguc-autowms/testsets/pointtimeseries/KIS___OPER_P___OBS_____L2.nc</FilePath>
+    <Variable>EV24</Variable>
+    <Styles>precipitation</Styles>
+    <Abstract>This is a View Service of data from the Royal Netherlands Meteorological Institute (KNMI). It concerns views for a non-harmonized INSPIRE dataset</Abstract>
+  </Layer>
+  
+  <Layer type="database">
+    <FilePath filter="^.*\.nc$">/data/adaguc-autowms/testsets/pointtimeseries/KIS___OPER_P___OBS_____L2.nc</FilePath>
+    <Variable>DDVEC</Variable>
+    <Styles>stretch</Styles>
+    <Abstract>This is a View Service of data from the Royal Netherlands Meteorological Institute (KNMI). It concerns views for a non-harmonized INSPIRE dataset</Abstract>
+  </Layer>
+  
+  <Layer type="database">
+    <FilePath filter="^.*\.nc$">/data/adaguc-autowms/testsets/pointtimeseries/KIS___OPER_P___OBS_____L2.nc</FilePath>
+    <Variable>FHVEC</Variable>
+    <Styles>stretch</Styles>
+    <Abstract>This is a View Service of data from the Royal Netherlands Meteorological Institute (KNMI). It concerns views for a non-harmonized INSPIRE dataset</Abstract>
+  </Layer>
+
+  
+
+    
+  </Configuration>

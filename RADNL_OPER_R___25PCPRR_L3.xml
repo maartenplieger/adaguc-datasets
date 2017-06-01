@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration>
+  <Legend name="SciamachyNO2Palette" type="colorRange">
+    <palette index="0"   red="0"  green="0"    blue="190"/> 
+    <palette index="5"   red="0"  green="0"    blue="255"/> 
+    <palette index="17"  red="0"  green="255"  blue="255"/> 
+    <palette index="40"  red="0"  green="255"  blue="0"/> 
+    <palette index="81"  red="255" green="255" blue="0"/> 
+    <palette index="156" red="255" green="0" blue="0"/> 
+    <palette index="190" red="255" green="0" blue="160"/> 
+    <palette index="240" red="255" green="0" blue="160"/> 
+  </Legend>
+  <Legend name="MethanePalette" type="colorRange">
+    <palette index="0"   red="0"   green="0"   blue="255"/> 
+    <palette index="120" red="0"   green="255" blue="0"/> 
+    <palette index="240" red="255" green="0"   blue="0"/> 
+  </Legend>
+  <Legend name="ECMWFPalette" type="colorRange">
+    <palette index="0"   red="0"   green="0"   blue="255"/> 
+    <palette index="80"   red="0"   green="255"   blue="255"/> 
+    <palette index="120" red="0"   green="255" blue="0"/> 
+    <palette index="160" red="255"   green="255" blue="0"/> 
+    <palette index="240" red="255"   green="0" blue="0"/> 
+  </Legend>
+  
+  <Legend name="KNMIRadarPalette_DBZ" type="interval">
+    <palette min="78"  max="93"  red="255" green="255" blue="255"/> 
+    <palette min="93"  max="110" red="170" green="170" blue="170"/> 
+    <palette min="110" max="125" red="85"  green="85"  blue="85"/> 
+    <palette min="125" max="142" red="255" green="128" blue="128"/> 
+    <palette min="142" max="157" red="255" green="0" blue="0"/> 
+    <palette min="157" max="255" red="0"   green="0"   blue="0"/> 
+  </Legend>
+  
+  <Legend name="KNMIRadarPalette_mmh" type="interval">
+    <palette min="0"  max="38"  red="255" green="255" blue="255"/> 
+    <palette min="38"  max="80" red="170" green="170" blue="170"/> 
+    <palette min="80" max="118" red="85"  green="85"  blue="85"/> 
+    <palette min="118" max="160" red="255" green="128" blue="128"/> 
+    <palette min="160" max="198" red="255" green="0" blue="0"/> 
+    <palette min="198" max="255" red="0"   green="0"   blue="0"/> 
+  </Legend>
+  
+    <Legend name="pseudoradar" type="interval">
+    <palette min="0"   max="11"  red="216" green="216" blue="216" />
+    <palette min="11"  max="64" red="000" green="255" blue="000" />
+    <palette min="64" max="128" red="255" green="255" blue="000" />
+    <palette min="128" max="240" red="255" green="000" blue="000" />
+  </Legend>
+  
+  <Style name="pseudoradar">
+    <Legend tickinterval="5" tickround="1">pseudoradar</Legend>
+    <Min>0</Min>
+    <Max>105</Max>
+    <RenderMethod>nearest</RenderMethod>
+    <ValueRange min=".001" max="10000000"/>
+  </Style>
+  
+  <Style name="knmiradar">
+        <Legend>KNMIRadarPalette_mmh</Legend>
+    <ValueRange min=".09" max="1000000"/>
+    <Scale>80</Scale>
+    <Offset>80</Offset>
+    <Log>10</Log>
+  </Style>
+  
+  <Style name="precip-rainbow">
+        <Legend>ECMWFPalette</Legend>
+    <ValueRange min=".09" max="10000000"/>
+    <Scale>80</Scale>
+    <Offset>80</Offset>
+    <Log>10</Log>
+  </Style>
+  
+  
+  <Legend name="gray" type="colorRange">
+    <palette index="0" red="0" green="0" blue="0" />
+    <palette index="240" red="255" green="255" blue="255" />
+  </Legend>
+  
+  <Style name="precip-gray">
+    <Legend>gray</Legend>
+    <Min>0.1</Min>
+    <Max>100</Max>
+    <Log>10</Log>
+    <ValueRange min="0.1" max="10000.0" />
+    <ContourIntervalL>500</ContourIntervalL>
+    <ContourIntervalH>1000</ContourIntervalH>
+    <RenderMethod>nearest</RenderMethod>
+  </Style>
+  <Legend name="precip-blue" type="colorRange">
+    <palette index="000" red="255" green="255" blue="255" />
+    <palette index="001" red="206" green="243" blue="255" />
+    <palette index="027" red="173" green="223" blue="255" />
+    <palette index="053" red="140" green="203" blue="255" />
+    <palette index="080" red="099" green="170" blue="255" />
+    <palette index="107" red="000" green="146" blue="255" />
+    <palette index="133" red="000" green="113" blue="255" />
+    <palette index="160" red="000" green="085" blue="255" />
+    <palette index="187" red="000" green="052" blue="255" />
+    <palette index="213" red="041" green="052" blue="222" />
+    <palette index="239" red="057" green="052" blue="189" />
+    <palette index="240" red="082" green="052" blue="165" />
+  </Legend>
+  <Style name="precip-blue">
+    <Legend>precip-blue</Legend>
+    <Min>0.1</Min>
+    <Max>100</Max>
+    <Log>10</Log>
+    <ContourIntervalL>500</ContourIntervalL>
+    <ContourIntervalH>1000</ContourIntervalH>
+    <RenderMethod>nearest</RenderMethod>
+  </Style>
+  <Style name="precip-blue-transparent">
+    <Legend>precip-blue</Legend>
+    <Min>0.1</Min>
+    <Max>100</Max>
+    <Log>10</Log>
+    <ValueRange min="0.1" max="10000.0" />
+    <ContourIntervalL>500</ContourIntervalL>
+    <ContourIntervalH>1000</ContourIntervalH>
+    <RenderMethod>nearest</RenderMethod>
+  </Style>
+  <Style name="precip-transparent">
+    <Legend>KNMIRadarPalette_mmh</Legend>
+    <Min>0.1</Min>
+    <Max>100</Max>
+    <Log>10</Log>
+    <ValueRange min="0.1" max="10000.0" />
+    <ContourIntervalL>500</ContourIntervalL>
+    <ContourIntervalH>1000</ContourIntervalH>
+    <RenderMethod>nearest</RenderMethod>
+  </Style>
+  <Legend name="KNMIRadarPalette_mmh_graybase" type="interval">
+    <palette min="0" max="1" red="248" green="248" blue="248" />
+    <palette min="1" max="38" red="200" green="200" blue="255" />
+    <palette min="38" max="80" red="170" green="170" blue="170" />
+    <palette min="80" max="118" red="85" green="85" blue="85" />
+    <palette min="118" max="160" red="255" green="128" blue="128" />
+    <palette min="160" max="198" red="255" green="0" blue="0" />
+    <palette min="198" max="255" red="0" green="0" blue="0" />
+  </Legend>
+  <Style name="precip">
+    <Legend>KNMIRadarPalette_mmh_graybase</Legend>
+    <Min>0.1</Min>
+    <Max>100</Max>
+    <Log>10</Log>
+    <ContourIntervalL>500</ContourIntervalL>
+    <ContourIntervalH>1000</ContourIntervalH>
+    <RenderMethod>nearest</RenderMethod>
+  </Style>
+  
+  
+  <Layer type="database">
+    <Name>RADNL_OPER_R___25PCPRR_L3_KNMI</Name>
+    <Title>RADNL_OPER_R___25PCPRR_L3_KNMI</Title>
+    <DataBaseTable>RADNL_OPER_R___25PCPRR_L3_KNMI</DataBaseTable>
+    <FilePath filter=".*\.nc$">/data/adaguc-autowms/testsets/projectedgrids/radar_nl/</FilePath>
+    <Dimension name="time" interval="PT5M">time</Dimension>
+    <Variable>precipitation</Variable>
+    <Styles>knmiradar,precip,precip-transparent,precip-gray,precip-rainbow,precip-blue,precip-blue-transparent,pseudoradar</Styles>
+    <MetadataURL>http://www.nationaalgeoregister.nl/geonetwork/srv/dut/xml.metadata.get?uuid=1bd3867c-3010-4cab-80a8-3b9ebef1dea1</MetadataURL>
+  </Layer>
+  <Layer type="database">
+    <Name>RADNL_OPER_R___25PCPRR_L3_COLOR</Name>
+    <Title>RADNL_OPER_R___25PCPRR_L3_COLOR</Title>
+    <DataBaseTable>RADNL_OPER_R___25PCPRR_L3_KNMI</DataBaseTable>
+    <FilePath filter=".*\.nc$">/data/adaguc-autowms/testsets/projectedgrids/radar_nl/</FilePath>
+    <Dimension name="time" interval="PT5M">time</Dimension>
+    <Variable>precipitation</Variable>
+    <Legend>ECMWFPalette</Legend>
+    <ValueRange min=".09" max="10000000"/>
+    <Scale>80</Scale>
+    <Offset>80</Offset>
+    <Log>10</Log>
+    <MetadataURL>http://www.nationaalgeoregister.nl/geonetwork/srv/dut/xml.metadata.get?uuid=1bd3867c-3010-4cab-80a8-3b9ebef1dea1</MetadataURL>
+  </Layer>
+</Configuration>

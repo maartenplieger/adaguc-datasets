@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration>
+  <!-- 
+  See https://dev.knmi.nl/projects/adagucserver/wiki/Dataset, for details
+  This file can be included by using the adaguc.dataset.cgi?service=wms&DATASET=tud_traffic& key value pair in the URL 
+  -->
+   <Legend name="verkeer" type="colorRange">
+    <palette index="0" red="0" green="0" blue="0"/> 
+    <palette index="30" red="255" green="0" blue="0"/> 
+    <palette index="50" red="255" green="0" blue="0"/> 
+    <palette index="80" red="0" green="0" blue="255"/> 
+    <palette index="120" red="0" green="255" blue="0"/>  
+    <palette index="240" red="255" green="255" blue="255"/>  
+  </Legend>
+  
+   <Style name="verkeer-inp">
+    <Legend tickinterval="20" fixed="true">verkeer</Legend>
+    <StandardNames standard_name="*"/>
+    <RenderMethod>linearinterpolation,nearest</RenderMethod>
+    <RenderMethod>point</RenderMethod>
+    <Min>0</Min>
+    <Max>120</Max>
+    <!--<Point fillcolor="" linecolor="" textcolor="" fontfile="" fontsize="" discradius="5" textradius="" textformat=" " dot="false" anglestart="" anglestep="" plotstationid="false" pointstyle="linearinterpolation"></Point>-->
+  </Style>
+  
+  
+    <Layer type="database">
+    <FilePath >/data/adaguc-autowms/testsets/tud/Amsterdam20170314.nc</FilePath>
+    <Variable>speed</Variable>
+    <Styles>verkeer-inp</Styles>
+  </Layer>
+  
+  <Layer type="database">
+    <FilePath >/data/adaguc-autowms/testsets/tud/Amsterdam20170314.nc</FilePath>
+    <Variable>flow</Variable>
+    <Styles>verkeer-inp</Styles>
+  </Layer>
+  
+  <Layer type="database">
+    <FilePath >/data/adaguc-autowms/testsets/tud/Amsterdam20170314.nc</FilePath>
+    <Variable>roadId</Variable>
+    <Styles>verkeer-inp</Styles>
+  </Layer>
+  
+  
+</Configuration>
+

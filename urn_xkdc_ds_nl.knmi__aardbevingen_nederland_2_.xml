@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <Configuration>
+    <WMS>
+      <Inspire>
+        <ViewServiceCSW>http://nationaalgeoregister.nl/geonetwork/srv/dut/csw?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;id=73914696-dc43-11e3-bdbb-901b0e19e163&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;elementSetName=full</ViewServiceCSW>
+        <DatasetCSW>http://nationaalgeoregister.nl/geonetwork/srv/dut/csw?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;id=b59f06c0-dce5-11e3-9c10-901b0e19e163&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;elementSetName=full</DatasetCSW>
+      </Inspire>
+      
+    </WMS>
+    
+    
+
+  <Legend name="magnitude_discrete" type="interval">
+    <palette index="0" color="#0A9BF850"/>  <!-- 0 Nothing -->
+    <palette index="24" color="#12B1C780"/>  <!-- 1 Insignificant -->
+    <palette index="48" color="#3EDF5180"/> <!-- 2 Low -->
+    <palette index="72" color="#A5FD0080"/> <!-- 3 Minor -->
+    <palette index="96" color="#DBFF00B0"/> <!-- 4 Moderate -->
+    <palette index="120" color="#FBFA14B0"/> <!-- 5 Intermediate -->
+    <palette index="144" color="#FEE310B0"/> <!-- 6 Noteworthy -->
+    <palette index="168" color="#FFC001C0"/> <!-- 7 High -->
+    <palette index="192" color="#FF9600C0"/> <!-- 8 Far-reaching -->
+    <palette index="216" color="#FF3200E0"/> <!-- 9 Outstanding -->
+    <palette index="239" color="#CC0000FF"/> <!-- 10 Extraordinary -->
+   
+  </Legend>
+  <Legend name="magnitude_continous" type="colorRange">
+    <palette index="0" color="#55005550"/>  <!-- 0 Nothing -->
+    <palette index="24" color="#66009980"/>  <!-- 1 Insignificant -->
+    <palette index="48" color="#0099FF80"/> <!-- 2 Low -->
+    <palette index="72" color="#00CC99B0"/> <!-- 3 Minor -->
+    <palette index="96" color="#99CC66B0"/> <!-- 4 Moderate -->
+    <palette index="120" color="#99FF33B0"/> <!-- 5 Intermediate -->
+    <palette index="144" color="#FFFF33B0"/> <!-- 6 Noteworthy -->
+    <palette index="168" color="#FFCC66C0"/> <!-- 7 High -->
+    <palette index="192" color="#FF9966D0"/> <!-- 8 Far-reaching -->
+    <palette index="216" color="#FF3300E0"/> <!-- 9 Outstanding -->
+    <palette index="239" color="#AA0000FF"/> <!-- 10 Extraordinary -->
+    
+  </Legend>
+  <Legend name="magnitude_noalpha" type="colorRange">
+    <palette index="0" color="#0A9BF8"/>  <!-- 0 Nothing -->
+    <palette index="24" color="#12B1C7"/>  <!-- 1 Insignificant -->
+    <palette index="48" color="#3EDF51"/> <!-- 2 Low -->
+    <palette index="72" color="#A5FD00"/> <!-- 3 Minor -->
+    <palette index="96" color="#DBFF00"/> <!-- 4 Moderate -->
+    <palette index="120" color="#FBFA14"/> <!-- 5 Intermediate -->
+    <palette index="144" color="#FEE310"/> <!-- 6 Noteworthy -->
+    <palette index="168" color="#FFC001"/> <!-- 7 High -->
+    <palette index="192" color="#FF9600"/> <!-- 8 Far-reaching -->
+    <palette index="216" color="#FF3200"/> <!-- 9 Outstanding -->
+    <palette index="239" color="#CC0000"/> <!-- 10 Extraordinary -->
+    
+  </Legend>
+  
+  <Legend name="isoluminant" type="colorRange">
+    <palette index="0"   red="216"  green="15" blue="15"/>
+    <palette index="48"  red="134"  green="134"   blue="0"/>
+    <palette index="96"  red="0"    green="151"   blue="0"/>
+    <palette index="144"  red="0"    green="143"   blue="143"/>
+    <palette index="192" red="81"   green="253" blue="247"/>
+    <palette index="240" red="183"   green="0" blue="183"/>
+  </Legend>
+  
+  <Legend name="depth" type="colorRange">
+    <palette index="0"  red="132"    green="211"   blue="255"/>
+    <palette index="48" red="247"   green="247" blue="247"/>
+    <palette index="96" red="255"   green="195" blue="57"/>
+    <palette index="144" red="232"  green="28" blue="0"/>
+    <palette index="192" red="165"  green="0" blue="0"/>
+    <palette index="240" red="90"   green="0" blue="0"/>
+  </Legend>
+  
+  <Style name="magnitude_discrete">
+    <Legend fixed="true" tickinterval="1">magnitude_discrete</Legend>
+    <RenderMethod>point</RenderMethod>
+    <Min>0</Min>
+    <Max>10</Max>
+    <NameMapping name="point"        title="Richter magnitude scale" abstract="With discrete colors"/>
+    <Point plotstationid="false" pointstyle="point" linecolor="#000000" discradius="8" textradius="15" dot="false" fontsize="10" textcolor="#000000"/>
+  </Style>
+  <Style name="magnitude_continous">
+    <Legend fixed="true" tickinterval="1">magnitude_noalpha</Legend>
+    <RenderMethod>point</RenderMethod>
+    <Min>0</Min>
+    <Max>10</Max>
+    <NameMapping name="point"        title="Richter magnitude scale" abstract="Wth continuous colors"/>
+    <Point plotstationid="false" pointstyle="point" discradius="8" textradius="15" dot="false" fontsize="10" textcolor="#000000"/>
+  </Style>
+  <Style name="magnitude2">
+    <Legend fixed="true" tickinterval="1">magnitude_discrete</Legend>
+    <RenderMethod>point</RenderMethod>
+    <Min>0</Min>
+    <Max>10</Max>
+    <NameMapping name="point"        title="Richter magnitude scale >=2.0" abstract="magnitude"/>
+    <Point plotstationid="false" pointstyle="point" discradius="20" textradius="0" dot="false" fontsize="14" textcolor="#FFFFFF"/>
+    <ValueRange min="2" max="1000"/>
+  </Style>
+  <Style name="magnitude3">
+    <Legend fixed="true" tickinterval="1">magnitude_discrete</Legend>
+    <RenderMethod>point</RenderMethod>
+    <Min>0</Min>
+    <Max>10</Max>
+    <NameMapping name="point"        title="Richter magnitude scale >=3.0" abstract="magnitude"/>
+    <Point plotstationid="false" pointstyle="point" discradius="20" textradius="0" dot="false" fontsize="14" textcolor="#FFFFFF"/>
+    <ValueRange min="3" max="1000"/>
+  </Style>
+  
+  <Style name="depth">
+    <Legend fixed="true" tickinterval="2">depth</Legend>
+    <RenderMethod>point</RenderMethod>
+    <Min>0</Min>
+    <Max>30</Max>
+    <NameMapping name="point"        title="Depth" abstract="Depth"/>
+    <Point plotstationid="false" pointstyle="point" discradius="17" textradius="5" dot="true" fontsize="9" textcolor="#000000" />
+  </Style>
+  
+   <Style name="event_type">
+    <Legend fixed="true" tickinterval="1">depth</Legend>
+    <RenderMethod>point</RenderMethod>
+    <Min>0</Min>
+    <Max>3</Max>
+    <NameMapping name="point"        title="Depth" abstract="Depth"/>
+    <Point plotstationid="false" pointstyle="point" discradius="1" textradius="5" dot="true" fontsize="9" textcolor="#000000" />
+  </Style>
+  
+  <Layer type="database">
+    <FilePath filter="^.*\.nc$">/data/adaguc-autowms/testsets/earthquakes/SEISM_OPER_P___EQ100___L2.nc</FilePath>
+    <Variable>magnitude</Variable>
+    <Styles>magnitude_continous,magnitude_discrete,magnitude2,magnitude3</Styles>
+    <Abstract>This is a View Service of data from the Royal Netherlands Meteorological Institute (KNMI). It concerns views for a non-harmonized INSPIRE dataset: KNMI earthquakes Netherlands layer Magnitude</Abstract>
+  </Layer>
+<!--
+  <Layer type="database">
+    <FilePath filter="^.*\.nc$">/data/adaguc-autowms/testsets/earthquakes/SEISM_OPER_P___EQ100___L2.nc</FilePath>
+    <Variable>depth</Variable>
+    <Styles>depth</Styles>
+    <Abstract>This is a View Service of data from the Royal Netherlands Meteorological Institute (KNMI). It concerns views for a non-harmonized INSPIRE dataset: KNMI earthquakes Netherlands layer Depth</Abstract>
+  </Layer>
+  
+   <Layer type="database">
+    <FilePath filter="^.*\.nc$">/data/adaguc-autowms/testsets/earthquakes/SEISM_OPER_P___EQ100___L2.nc</FilePath>
+    <Variable>event_type</Variable>
+    <Styles>event_type</Styles>
+    <Abstract>This is a View Service of data from the Royal Netherlands Meteorological Institute (KNMI). It concerns views for a non-harmonized INSPIRE dataset: KNMI earthquakes Netherlands layer Type</Abstract>
+  </Layer>
+  
+
+  -->
+
+    
+  </Configuration>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <Configuration>
+    <WMS>
+      <Inspire>
+        <ViewServiceCSW>http://nationaalgeoregister.nl/geonetwork/srv/dut/csw?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;id=6bd9f72e-dcd2-11e3-ab0a-901b0e19e163&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;elementSetName=full</ViewServiceCSW>
+        <DatasetCSW>http://nationaalgeoregister.nl/geonetwork/srv/dut/csw?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;id=380aa01e-dce7-11e3-9f07-901b0e19e163&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;elementSetName=full</DatasetCSW>
+      </Inspire>
+      
+    </WMS>
+    
+    <Legend name="standard" type="colorRange">
+      <palette index="0"  red="132"    green="211"   blue="255"/>
+      <palette index="48" red="247"   green="247" blue="247"/>
+      <palette index="96" red="255"   green="195" blue="57"/>
+      <palette index="144" red="232"  green="28" blue="0"/>
+      <palette index="192" red="165"  green="0" blue="0"/>
+      <palette index="240" red="90"   green="0" blue="0"/>
+    </Legend>
+    
+    <Legend name="showonlytrue" type="colorRange">
+      <palette index="0"  red="255"    green="0"   blue="0"/>
+    
+      <palette index="240" red="255"   green="0" blue="0"/>
+    </Legend>
+    
+    <Style name="showonlytrue">
+      <Legend fixed="true" tickinterval="1">showonlytrue</Legend>
+      <RenderMethod>point</RenderMethod>
+      <Min>0</Min>
+      <Max>12</Max>
+      <NameMapping name="point"        title="Richter magnitude scale" abstract="With discrete colors"/>
+      <Point plotstationid="false" pointstyle="point" discradius="5" textradius="0" dot="true" fontsize="14" textformat=" " textcolor="#000000"/>
+      <ValueRange min="0.5" max="2"/>
+    </Style>
+      
+    <Style name="height">
+      <Legend fixed="true" tickinterval="5">standard</Legend>
+      <RenderMethod>point</RenderMethod>
+      <Min>-10</Min>
+      <Max>70</Max>
+      <NameMapping name="point"        title="Richter magnitude scale" abstract="With discrete colors"/>
+      <Point plotstationid="false" pointstyle="point" discradius="8" textradius="17"  dot="true" fontsize="10"  textcolor="#000000"/>
+ 
+    </Style>
+    
+    <Style name="stationname">
+      <Legend fixed="true" tickinterval="5">standard</Legend>
+      <RenderMethod>point</RenderMethod>
+      <Min>-10</Min>
+      <Max>70</Max>
+      <NameMapping name="point"        title="Richter magnitude scale" abstract="With discrete colors"/>
+      <Point plotstationid="false" pointstyle="point" discradius="1" textradius="6" dot="true" fontsize="8"  textcolor="#000000"/>
+ 
+    </Style>
+    
+    <Layer type="database">
+      <FilePath filter=".*\.nc$">/data/adaguc-autowms/testsets/pointtimeseries/STD___OPER_P___OBS_____L2.nc</FilePath>
+      <Name>name</Name>
+      <Title>Station name</Title>
+      <Variable>name</Variable>
+      <Abstract>Station name</Abstract><Styles>stationname</Styles>
+    </Layer>
+
+    <Layer type="database">
+      <FilePath filter=".*\.nc$">/data/adaguc-autowms/testsets/pointtimeseries/STD___OPER_P___OBS_____L2.nc</FilePath>
+      <Name>WMO</Name>
+      <Title>WMO number</Title>
+      <Variable>WMO</Variable>
+      <Abstract>WMO number</Abstract><Styles>stationname</Styles>
+    </Layer>
+
+    <Layer type="database">
+      <FilePath filter=".*\.nc$">/data/adaguc-autowms/testsets/pointtimeseries/STD___OPER_P___OBS_____L2.nc</FilePath>
+      <Name>type</Name>
+      <Title>Station type</Title>
+      <Variable>type</Variable>
+      <Abstract>Station type</Abstract><Styles>stationname</Styles>
+    </Layer>
+
+    <Layer type="database">
+      <FilePath filter=".*\.nc$">/data/adaguc-autowms/testsets/pointtimeseries/STD___OPER_P___OBS_____L2.nc</FilePath>
+      <Name>height</Name>
+      <Title>Height</Title>
+      <Variable>height</Variable>
+      <Abstract>Height</Abstract><Styles>height</Styles>
+    </Layer>
+
+    <Layer type="database">
+      <FilePath filter=".*\.nc$">/data/adaguc-autowms/testsets/pointtimeseries/STD___OPER_P___OBS_____L2.nc</FilePath>
+      <Name>obs_pres</Name>
+      <Title>Pressure observations</Title>
+      <Variable>obs_pres</Variable>
+      <Abstract>Pressure observations</Abstract><Styles>showonlytrue</Styles>
+    </Layer>
+
+    <Layer type="database">
+      <FilePath filter=".*\.nc$">/data/adaguc-autowms/testsets/pointtimeseries/STD___OPER_P___OBS_____L2.nc</FilePath>
+      <Name>obs_wind</Name>
+      <Title>Wind observations</Title>
+      <Variable>obs_wind</Variable>
+      <Abstract>Wind observations</Abstract><Styles>showonlytrue</Styles>
+    </Layer>
+
+    <Layer type="database">
+      <FilePath filter=".*\.nc$">/data/adaguc-autowms/testsets/pointtimeseries/STD___OPER_P___OBS_____L2.nc</FilePath>
+      <Name>obs_temp</Name>
+      <Title>Temperature observations</Title>
+      <Variable>obs_temp</Variable>
+      <Abstract>Temperature observations</Abstract><Styles>showonlytrue</Styles>
+    </Layer>
+
+    <Layer type="database">
+      <FilePath filter=".*\.nc$">/data/adaguc-autowms/testsets/pointtimeseries/STD___OPER_P___OBS_____L2.nc</FilePath>
+      <Name>obs_hum</Name>
+      <Title>Humidity observations</Title>
+      <Variable>obs_hum</Variable>
+      <Abstract>Humidity observations</Abstract><Styles>showonlytrue</Styles>
+    </Layer>
+
+    <Layer type="database">
+      <FilePath filter=".*\.nc$">/data/adaguc-autowms/testsets/pointtimeseries/STD___OPER_P___OBS_____L2.nc</FilePath>
+      <Name>obs_prec</Name>
+      <Title>Precipitation observations</Title>
+      <Variable>obs_prec</Variable>
+      <Abstract>Precipitation observations</Abstract><Styles>showonlytrue</Styles>
+    </Layer>
+
+    <Layer type="database">
+      <FilePath filter=".*\.nc$">/data/adaguc-autowms/testsets/pointtimeseries/STD___OPER_P___OBS_____L2.nc</FilePath>
+      <Name>obs_rad</Name>
+      <Title>Radiation observations</Title>
+      <Variable>obs_rad</Variable>
+      <Abstract>Radiation observations</Abstract><Styles>showonlytrue</Styles>
+    </Layer>
+
+    <Layer type="database">
+      <FilePath filter=".*\.nc$">/data/adaguc-autowms/testsets/pointtimeseries/STD___OPER_P___OBS_____L2.nc</FilePath>
+      <Name>obs_vis</Name>
+      <Title>Visibility observations</Title>
+      <Variable>obs_vis</Variable>
+      <Abstract>Visibility observations</Abstract><Styles>showonlytrue</Styles>
+    </Layer>
+
+    <Layer type="database">
+      <FilePath filter=".*\.nc$">/data/adaguc-autowms/testsets/pointtimeseries/STD___OPER_P___OBS_____L2.nc</FilePath>
+      <Name>obs_clouds</Name>
+      <Title>Clouds observations</Title>
+      <Variable>obs_clouds</Variable>
+      <Abstract>Clouds observations</Abstract><Styles>showonlytrue</Styles>
+    </Layer>
+
+    <Layer type="database">
+      <FilePath filter=".*\.nc$">/data/adaguc-autowms/testsets/pointtimeseries/STD___OPER_P___OBS_____L2.nc</FilePath>
+      <Name>obs_presweather</Name>
+      <Title>Present weather observations</Title>
+      <Variable>obs_presweather</Variable>
+      <Abstract>Present weather observations</Abstract><Styles>showonlytrue</Styles>
+    </Layer>
+
+    <Layer type="database">
+      <FilePath filter=".*\.nc$">/data/adaguc-autowms/testsets/pointtimeseries/STD___OPER_P___OBS_____L2.nc</FilePath>
+      <Name>obs_snowdepth</Name>
+      <Title>Snow depth observations</Title>
+      <Variable>obs_snowdepth</Variable>
+      <Abstract>Snow depth observations</Abstract><Styles>showonlytrue</Styles>
+    </Layer>
+
+    <Layer type="database">
+      <FilePath filter=".*\.nc$">/data/adaguc-autowms/testsets/pointtimeseries/STD___OPER_P___OBS_____L2.nc</FilePath>
+      <Name>obs_soiltemp</Name>
+      <Title>Soil Temperature observations</Title>
+      <Variable>obs_soiltemp</Variable>
+      <Abstract>Soil Temperature observations</Abstract><Styles>showonlytrue</Styles>
+    </Layer>
+
+
+
+
+    
+  </Configuration>
