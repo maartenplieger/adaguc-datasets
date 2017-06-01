@@ -15,7 +15,7 @@
                   minlevel="1"
                   maxlevel="4"
                   tilemode="avg_rgba"
-                  debug="false"
+                  debug="true"
                   threads="1" 
                   tilepath="/data/adaguc-autowms/tiles"
                   optimizeextent="true"
