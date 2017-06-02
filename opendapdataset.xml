@@ -154,7 +154,7 @@
   
   
   <Layer type="database">
-    <Name>RADNL_OPER_R___25PCPRR_L3_KNMI</Name>
+    <Name>RADNL_OPER_R___25PCPRR_L3_KNMI.nc</Name>
     <Title>RADNL_OPER_R___25PCPRR_L3_KNMI</Title>
     <DataBaseTable>RADNL_OPER_R___25PCPRR_L3_KNMI</DataBaseTable>
     <FilePath filter=".*\.nc$">/data/adaguc-autowms/testsets/projectedgrids/radar_nl/</FilePath>
@@ -163,18 +163,5 @@
     <Styles>knmiradar,precip,precip-transparent,precip-gray,precip-rainbow,precip-blue,precip-blue-transparent,pseudoradar</Styles>
     <MetadataURL>http://www.nationaalgeoregister.nl/geonetwork/srv/dut/xml.metadata.get?uuid=1bd3867c-3010-4cab-80a8-3b9ebef1dea1</MetadataURL>
   </Layer>
-  <Layer type="database">
-    <Name>RADNL_OPER_R___25PCPRR_L3_COLOR</Name>
-    <Title>RADNL_OPER_R___25PCPRR_L3_COLOR</Title>
-    <DataBaseTable>RADNL_OPER_R___25PCPRR_L3_KNMI</DataBaseTable>
-    <FilePath filter=".*\.nc$">/data/adaguc-autowms/testsets/projectedgrids/radar_nl/</FilePath>
-    <Dimension name="time" interval="PT5M">time</Dimension>
-    <Variable>precipitation</Variable>
-    <Legend>ECMWFPalette</Legend>
-    <ValueRange min=".09" max="10000000"/>
-    <Scale>80</Scale>
-    <Offset>80</Offset>
-    <Log>10</Log>
-    <MetadataURL>http://www.nationaalgeoregister.nl/geonetwork/srv/dut/xml.metadata.get?uuid=1bd3867c-3010-4cab-80a8-3b9ebef1dea1</MetadataURL>
-  </Layer>
+  
 </Configuration>
