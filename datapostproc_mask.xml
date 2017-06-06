@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration>
+  <!-- 
+  See https://dev.knmi.nl/projects/adagucserver/wiki/Dataset, for details
+  -->
+  
+   <Layer type="database">
+    <Name>temperature</Name>
+    <Title>temperature</Title>
+    <FilePath>http://opendap.knmi.nl/knmi/thredds/dodsC/ADAGUC/testsets/projectedgrids/t2m.KNMI-2014.KNXT12.HCAST2.DD.nc.fixed.nc</FilePath>
+    <Variable>t2m</Variable>
+    <Styles>auto</Styles>
+    <Min>250</Min>
+    <Max>300</Max>
+  </Layer>
+
+  <Layer type="database">
+    <Name>precipitation</Name>
+    <Title>precipitation</Title>
+    <FilePath>http://opendap.knmi.nl/knmi/thredds/dodsC/e-obs_0.25regular/rr_0.25deg_reg_v15.0.nc</FilePath>
+    <Variable>rr</Variable>
+    <Styles>auto</Styles>
+  </Layer>
+
+  <Layer type="database">
+    <Name>masked</Name>
+    <Title>masked</Title>
+    <FilePath>http://opendap.knmi.nl/knmi/thredds/dodsC/ADAGUC/testsets/projectedgrids/t2m.KNMI-2014.KNXT12.HCAST2.DD.nc.fixed.nc</FilePath>
+    <Variable>t2m</Variable>
+    <Styles>auto</Styles>
+    <Min>250</Min>
+    <Max>300</Max>
+    <DataPostProc algorithm="include_layer" name="precipitation" mode="append"/>
+    <DataPostProc algorithm="datamask" a="0" b="0" name="newmask" units="newunits" c="0" mode="if_mask_excludes_then_nodata_else_data"/>
+  </Layer>
+  
+</Configuration>
+
