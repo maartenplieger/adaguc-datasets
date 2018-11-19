@@ -17,7 +17,7 @@
   <Layer type="database">
     <Name>precipitation</Name>
     <Title>precipitation</Title>
-    <FilePath>http://opendap.knmi.nl/knmi/thredds/dodsC/e-obs_0.25regular/rr_0.25deg_reg_v15.0.nc</FilePath>
+    <FilePath>http://opendap.knmi.nl/knmi/thredds/dodsC/e-obs_0.25regular/rr_0.25deg_reg_v17.0.nc</FilePath>
     <Variable>rr</Variable>
     <Styles>auto</Styles>
   </Layer>
